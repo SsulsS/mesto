@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <img src="./image/logo/logo.svg" alt="Логотип" class="header__logo">
+    </header>
+
+    <main class="content">
+
+        <section class="profile">
+            <div class="profile__container">
+                <img src="./image/image.jpg" alt="" class="profile__avatar">
+                <div class="profile__info">
+                        <p class="profile__name">Жак-Ив Кусто</p>
+                        <img src="./image/logo/pen.svg" alt="" class="profile__edit-button">
+                        <p class="profile__activity">Исследователь океана</p>
+                </div>
+            </div>
+                <img src="./image/logo/krest.svg" alt="" class="profile__add-button">
+        </section>
+
+        <section class="elements">
+
+            <div class="element">
+                <img src="./image/karachaevsk.jpg" alt="Карачаевск" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Карачаевск</p>
+                    <label for="like1" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like1">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="element">
+                <img src="./image/elbrus.jpg" alt="Эльбрус" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Эльбрус</p>
+                    <label for="like2" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like2">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="element">
+                <img src="./image/dombay.jpg" alt="Домбай" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Домбай</p>
+                    <label for="like3" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like3">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="element element_second-line">
+                <img src="./image/karachaevsk.jpg" alt="Карачаевск" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Карачаевск</p>
+                    <label for="like4" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like4">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="element element_second-line">
+                <img src="./image/elbrus.jpg" alt="Эльбрус" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Эльбрус</p>
+                    <label for="like5" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like5">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="element element_second-line" >
+                <img src="./image/dombay.jpg" alt="Домбай" class="element__place-photo">
+                <div class="element__place">
+                    <p class="element__place-name">Домбай</p>
+                    <label for="like6" class="element__input-label">
+                        <input type="checkbox" class="element__input" id="like6">
+                        <span class="element__input_style"></span>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+         <section class="edit-form edit-form_disabled">
+            <div class="edit-form__opacity"></div>
+            <div class="edit-form__container">
+                <img src="./image/logo/CloseIcon.svg" alt="" class="form__close-button">
+                <h2 class="form__title">Редактировать профиль</h2>
+                <input type="text" class="form__input form__input_type_name" placeholder="Имя">
+                <input type="text" class="form__input form__input_type_activity" placeholder="Деятельность">
+                <button class="form__button">Сохранить</button>
+            </div>
+         </section>
+
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

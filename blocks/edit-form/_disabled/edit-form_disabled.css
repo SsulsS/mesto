@@ -1,0 +1,4 @@
+.edit-form_disabled{
+    opacity: 0;
+    z-index: -1;
+}

@@ -1,0 +1,14 @@
+.element__input_style{
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../image/logo/heart.svg);
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+}
+
+.element__input_style:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}

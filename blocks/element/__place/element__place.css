@@ -1,0 +1,7 @@
+.element__place{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px 0 0 0;
+}

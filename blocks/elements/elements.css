@@ -1,0 +1,8 @@
+.elements{
+    max-width: 880px;
+    margin: 46px auto 66px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

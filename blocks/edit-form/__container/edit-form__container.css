@@ -1,0 +1,11 @@
+.edit-form__container{
+    width: 430px;
+    height: 330px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}

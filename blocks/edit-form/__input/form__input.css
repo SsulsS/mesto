@@ -1,0 +1,15 @@
+.form__input{
+    border:none;
+    border-bottom: 1px solid black;
+    margin: 0 0 30px 36px;
+    font-family: inherit;
+    max-width: 358px;
+}
+
+.form__input:last-of-type{
+    margin-bottom: 48px;
+}
+
+.form__input:focus{
+    outline:none;    
+}
