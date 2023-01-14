@@ -5,3 +5,21 @@
     max-width: 330px;
     margin: 34px 0 54px 36px;
 }
+
+@media screen and (max-width:510px){
+    .form__title{
+        font-size: 20px;
+        line-height: 25px;
+        margin-left: 27px;
+        max-width: 260px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .form__title{
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 238px;
+        margin: 25px auto 75px auto
+    }
+}

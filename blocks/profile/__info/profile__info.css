@@ -12,6 +12,6 @@
     .profile__info{
         margin: 22px 0 0 0;
         max-width: 282px;
-        justify-content: center;
+        justify-content: flex-start;
     }
 }

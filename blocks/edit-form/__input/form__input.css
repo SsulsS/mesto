@@ -13,3 +13,17 @@
 .form__input:focus{
     outline:none;    
 }
+
+@media screen and (max-width:510px){
+    .form__input{
+        margin-left: 27px;
+        max-width: 260px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .form__input{
+        max-width: 238px;
+        margin: 0 auto 30px auto
+    }
+}
