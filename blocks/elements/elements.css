@@ -6,3 +6,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+@media screen and (max-width:425px) {
+    .elements{
+        flex-direction: column;
+        max-width: 282px;
+        margin: 36px auto 48px auto ;
+    }
+}
