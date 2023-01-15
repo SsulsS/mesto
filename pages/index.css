@@ -32,7 +32,7 @@
 @import url(../blocks/element/__place-name/element__place-name.css);
 @import url(../blocks/element/__input-label/element__input-label.css);
 @import url(../blocks/element/__input/element__input.css);
-@import url(../blocks/element/__input_style/element__input_style.css);
+@import url(../blocks/element/__input__style/element__input__style.css);
 
 /*EDIT-FORM*/
 @import url(../blocks/edit-form/edit-form.css);

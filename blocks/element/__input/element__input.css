@@ -6,10 +6,10 @@
     clip-path: inset(0 0 0 0);
 }
 
-.element__input:disabled + .element__input_style  {
+.element__input:disabled + .element__input__style  {
     background-image: url(../../../image/logo/heart.svg);
 }
 
-.element__input:checked + .element__input_style {
+.element__input:checked + .element__input__style {
     background-image: url(../../../image/logo/bheart.svg);
 }
