@@ -1,4 +1,4 @@
-.element__input__style{
+.element__input-style{
     display: inline-block;
     vertical-align: middle;
     width: 22px;
@@ -8,7 +8,7 @@
     transition: opacity 0.5s ease 0s;
 }
 
-.element__input__style:hover{
+.element__input-style:hover{
     opacity: 0.6;
     cursor: pointer;
 }
