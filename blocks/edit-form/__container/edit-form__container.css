@@ -1,6 +1,6 @@
 .edit-form__container{
     width: 430px;
-    height: 330px;
+    
     background-color: white;
     border-radius: 10px;
     margin: auto;
@@ -8,6 +8,7 @@
     flex-direction: column;
     z-index: 1;
     position: relative;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width:510px){

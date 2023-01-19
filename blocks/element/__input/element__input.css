@@ -5,11 +5,3 @@
     overflow: hidden;
     clip-path: inset(0 0 0 0);
 }
-
-.element__input:disabled + .element__input-style  {
-    background-image: url(../../../image/logo/heart.svg);
-}
-
-.element__input:checked + .element__input-style {
-    background-image: url(../../../image/logo/bheart.svg);
-}
