@@ -1,6 +1,5 @@
-.edit-form__container{
+.popup__container{
     width: 430px;
-    
     background-color: white;
     border-radius: 10px;
     margin: auto;
@@ -12,14 +11,14 @@
 }
 
 @media screen and (max-width:510px){
-    .edit-form__container{
+    .popup__container{
         width: 330px;
         margin-top: 150px;
     }
 }
 
 @media screen and (max-width:425px){
-    .edit-form__container{
+    .popup__container{
         max-width: 282px;
         margin: 123px auto 0 auto;
     }

@@ -1,4 +1,4 @@
-.edit-form__button{
+.popup__button{
     color: white;
     background-color: black;
     font-weight: 400;
@@ -13,20 +13,20 @@
     transition: opacity 0.5s ease 0s;
 }
 
-.edit-form__button:hover{
+.popup__button:hover{
     opacity: 0.8;
     cursor: pointer;
 }
 
 @media screen and (max-width:510px){
-    .edit-form__button{
+    .popup__button{
         width: 260px;
         margin-left: 27px;
     }
 }
 
 @media screen and (max-width:425px){
-    .edit-form__button{
+    .popup__button{
         font-size: 14px;
         line-height: 17px;
         width: 238px;
