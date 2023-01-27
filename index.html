@@ -19,7 +19,7 @@
             <div class="profile__container">
                 <img src="./images/image.jpg" alt="Аватар" class="profile__avatar">
                 <div class="profile__info">
-                        <h2 class="profile__name">Жак-Ив Кусто </h2>
+                        <h1 class="profile__name">Жак-Ив Кусто </h1>
                         <button type="button" class="profile__edit-button"><img src="./images/logo/pen.svg" alt="редактировать" class="profile__edit-button-image"></button>    
                         <p class="profile__activity">Исследователь океана</p>
                 </div>
@@ -32,7 +32,7 @@
             <article class="element">
                 <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__place-photo">
                 <div class="element__place">
-                    <p class="element__place-name">Карачаевскeqeqeqeqweqqew</p>
+                    <h2 class="element__place-name">Карачаевск</p>
                     <button type="button" class="element__button"></button>
                 </div>
             </article>
@@ -79,14 +79,14 @@
 
         </section>
 
-         <section class="popup popup_opened">
+         <section class="popup">
             <div class="popup__container">
                 <button type="button" class="popup__close-button"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form action="" name="popup" class="popup__form">
-                    <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="popup">
-                    <input type="text" class="popup__input popup__input_type_activity" placeholder="Деятельность" name="popup">
-                    <button type="submit" class="popup__button" name="popup">Сохранить</button>
+                <form name="popup-form" class="popup__form">
+                    <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="popup-input-name">
+                    <input type="text" class="popup__input popup__input_type_activity" placeholder="Деятельность" name="popup-input-activity">
+                    <button type="submit" class="popup__button" name="popup-button">Сохранить</button>
                 </form>
             </div>
          </section>

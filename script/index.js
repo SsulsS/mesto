@@ -9,11 +9,11 @@ let activity = document.querySelector('.popup__input_type_activity');
 let formPopup = document.querySelector('.popup__form')
 
 function close() {
-    editForm.classList.add('popup_opened');
+    editForm.classList.remove('popup_opened');
 }
 
 function openPopup(){
-    editForm.classList.remove('popup_opened');
+    editForm.classList.add('popup_opened');
     person.value = profileName.textContent;
     activity.value = profileActivity.textContent;
 }
