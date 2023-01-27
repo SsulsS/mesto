@@ -1,4 +1,5 @@
 .popup__button{
+    padding: 0;
     color: white;
     background-color: black;
     font-weight: 400;

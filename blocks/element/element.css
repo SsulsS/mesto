@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+.element::first-line{
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width:425px) {
     .element{
         margin-top: 20px;

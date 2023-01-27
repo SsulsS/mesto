@@ -28,13 +28,10 @@
 
 /*ELEMENT*/
 @import url(../blocks/element/element.css);
-@import url(../blocks/element/_second-line/element_second-line.css);
 @import url(../blocks/element/__place-photo/element__place-photo.css);
 @import url(../blocks/element/__place/element__place.css);
 @import url(../blocks/element/__place-name/element__place-name.css);
-@import url(../blocks/element/__input-label/element__input-label.css);
-@import url(../blocks/element/__input/element__input.css);
-@import url(../blocks/element/__input-style/element__input-style.css);
+@import url(../blocks/element/__button/element__button.css);
 
 /*POPUP*/
 @import url(../blocks/popup/popup.css);

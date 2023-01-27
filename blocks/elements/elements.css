@@ -1,15 +1,27 @@
 .elements{
     max-width: 880px;
     margin: 46px auto 66px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 17px;
+}
+
+@media screen and (max-width:900px) {
+    .elements{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:581px) {
+    .elements{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (max-width:425px) {
     .elements{
-        flex-direction: column;
         max-width: 282px;
         margin: 36px auto 48px auto;
     }
