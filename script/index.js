@@ -6,7 +6,7 @@ let profileName = document.querySelector('.profile__name')
 let profileActivity = document.querySelector('.profile__activity')
 let person = document.querySelector('.popup__input_type_name');
 let activity = document.querySelector('.popup__input_type_activity');
-let saveButton = document.querySelector('.popup__button');
+let formPopup = document.querySelector('.popup__form')
 
 function close() {
     editForm.classList.add('popup_opened');
@@ -27,5 +27,4 @@ function save(event){
 
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', close);
-saveButton.addEventListener('click', save);
-/*Не понял как передать значение чере submit, Оставил ивент что бы кнопка работала, если сможете подсказать поподробнее буду благодарен */
+formPopup.addEventListener('submit', save)

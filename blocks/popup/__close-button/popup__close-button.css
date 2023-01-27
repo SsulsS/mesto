@@ -8,7 +8,7 @@
     transition: opacity 0.5s ease 0s;
     background-color: transparent;
     border: none;
-    background-image: url(../../../image/logo/CloseIcon.svg);
+    background-image: url(../../../images/logo/CloseIcon.svg);
     background-size: cover;
 }
 

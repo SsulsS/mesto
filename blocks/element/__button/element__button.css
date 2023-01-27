@@ -3,7 +3,7 @@
     height: 19px;
     background-color: transparent;
     border: none;
-    background-image: url(../../../image/logo/heart.svg);
+    background-image: url(../../../images/logo/heart.svg);
     background-size: cover;
     opacity: 1;
     transition: opacity 0.5s ease 0s; 
