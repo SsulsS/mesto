@@ -1,6 +1,6 @@
 .popup__input{
     border:none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin: 0 0 30px 36px;
     font-family: inherit;
     max-width: 358px;
@@ -11,7 +11,7 @@
 }
 
 .popup__input:focus{
-    outline:none;    
+    outline:none;
 }
 
 @media screen and (max-width:510px){
