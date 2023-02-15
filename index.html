@@ -29,53 +29,7 @@
 
         <section class="elements">
 
-            <article class="element">
-                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__place-photo">
-                <div class="element__place">
-                    <h2 class="element__place-name">Карачаевск</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
-            
-            <article class="element">
-                <img src="./images/elbrus.jpg" alt="Эльбрус" class="element__place-photo">
-                <div class="element__place">
-                    <h2 class="element__place-name">Эльбрус</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
-
-            <article class="element">
-                <img src="./images/dombay.jpg" alt="Домбай" class="element__place-photo">
-                <div class="element__place">
-                    <h2 class="element__place-name">Домбай</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
-
-            <article class="element">
-                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__place-photo">
-                <div class="element__place">
-                    <h2 class="element__place-name">Карачаевск</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
-            
-            <article class="element">
-                <img src="./images/elbrus.jpg" alt="Эльбрус" class="element__place-photo">
-                <div class="element__place">
-                    <h2 class="element__place-name">Эльбрус</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
-
-            <article class="element" >
-                <img src="./images/dombay.jpg" alt="Домбай" class="element__place-photo">
-                <div class="element__place">
-                    <h2  class="element__place-name">Домбай</h2>
-                    <button type="button" class="element__button"></button>
-                </div>
-            </article>
+           
 
         </section>
 
@@ -91,10 +45,33 @@
             </div>
          </section>
 
+         <section class="add-popup">
+            <div class="add-popup__container">
+                <button type="button" class="add-popup__close-button"></button>
+                <h2 class="add-popup__title">Новое место</h2>
+                <form name="add-popup-form" class="add-popup__form">
+                    <input type="text" class="add-popup__input add-popup__input_type_place" placeholder="Название" name="add-popup-input-name">
+                    <input type="text" class="add-popup__input add-popup__input_type_link" placeholder="Ссылка на картинку" name="add-popup-input-link">
+                    <button type="submit" class="add-popup__button" name="add-popup-button">Создать</button>    
+                </form>
+            </div>
+        </section>
+
     </main>
     <footer class="footer">
         <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
+
+    <template id="element-template">
+        <article class="element">
+            <button type="button" class="element__delite"></button>
+            <img src="#" alt="фото" class="element__place-photo">
+            <div class="element__place">
+                <h2 class="element__place-name">Карачаевск</h2>
+                <button type="button" class="element__button"></button>
+            </div>
+        </article>
+    </template>
 
     <script src="./script/index.js"></script>
 </body>

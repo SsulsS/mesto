@@ -8,6 +8,8 @@ let person = document.querySelector('.popup__input_type_name');
 let activity = document.querySelector('.popup__input_type_activity');
 let formPopup = document.querySelector('.popup__form')
 
+
+
 function close() {
     editForm.classList.remove('popup_opened');
 }
@@ -28,3 +30,93 @@ function save(event){
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', close);
 formPopup.addEventListener('submit', save)
+
+let addButton = document.querySelector('.profile__add-button');
+let addPopup = document.querySelector('.add-popup');
+let closeAddButton = document.querySelector('.add-popup__close-button');
+
+
+
+
+const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+
+];
+
+const elements = document.querySelector('.elements');
+const placeName = document.querySelector('.add-popup__input_type_place');
+const placeLink = document.querySelector('.add-popup__input_type_link');
+
+function openPage(){
+  const elementTemplate = document.querySelector('#element-template').content;
+
+  for (let i = 0; i < initialCards.length; i++){
+    const element = elementTemplate.querySelector('.element').cloneNode(true);
+    element.querySelector('.element__place-name').textContent = initialCards[i].name;
+    element.querySelector('.element__place-photo').src = initialCards[i].link;
+
+    element.querySelector('.element__button').addEventListener('click', function (evt) {
+      evt.target.classList.toggle('element__button_active');
+  });
+    elements.append(element);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', openPage)
+
+function openAddPopup(){
+  addPopup.classList.add('add-popup_opened');
+}
+
+function closeAddpopup() {
+  addPopup.classList.remove('add-popup_opened');
+  placeName.value = ''
+  placeLink.value = ''
+}
+
+function addCard (event) {
+  event.preventDefault();
+  const elementTemplate = document.querySelector('#element-template').content;
+  const element = elementTemplate.querySelector('.element').cloneNode(true);
+  
+  element.querySelector('.element__place-name').textContent = placeName.value;
+  element.querySelector('.element__place-photo').src = placeLink.value;
+
+  elements.append(element);
+
+  element.querySelector('.element__button').addEventListener('click', function (evt) {
+    evt.target.classList.toggle('element__button_active');
+});
+
+  closeAddpopup();
+};
+
+
+addButton.addEventListener('click', openAddPopup);
+closeAddButton.addEventListener('click', closeAddpopup );
+document.querySelector('.add-popup__form').addEventListener('submit', addCard);
+
+console.log(elements);
