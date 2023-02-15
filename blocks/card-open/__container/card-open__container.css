@@ -1,0 +1,12 @@
+.card-open__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    position: relative;
+}
+
+@media screen and (max-width:425px) {
+    .card-open__container{
+        margin-top: 136px;
+    }
+}

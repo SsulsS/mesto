@@ -69,6 +69,8 @@ const initialCards = [
 const elements = document.querySelector('.elements');
 const placeName = document.querySelector('.add-popup__input_type_place');
 const placeLink = document.querySelector('.add-popup__input_type_link');
+const cardOpen = document.querySelector('.card-open');
+const closeCardButton = document.querySelector('.card-open__button');
 
 function openPage(){
   const elementTemplate = document.querySelector('#element-template').content;
@@ -81,6 +83,17 @@ function openPage(){
     element.querySelector('.element__button').addEventListener('click', function (evt) {
       evt.target.classList.toggle('element__button_active');
   });
+
+  element.querySelector('.element__delite').addEventListener('click',function(evt){
+    evt.target.parentElement.remove('element')
+  });
+
+  element.querySelector('.element__place-photo').addEventListener('click', function(evt){
+    cardOpen.classList.add('card-open_active');
+    cardOpen.querySelector('.card-open__image').src = initialCards[i].link;
+    cardOpen.querySelector('.card-open__label').textContent = initialCards[i].name;
+  })
+
     elements.append(element);
   }
 }
@@ -105,18 +118,31 @@ function addCard (event) {
   element.querySelector('.element__place-name').textContent = placeName.value;
   element.querySelector('.element__place-photo').src = placeLink.value;
 
-  elements.append(element);
+  elements.prepend(element);
 
   element.querySelector('.element__button').addEventListener('click', function (evt) {
     evt.target.classList.toggle('element__button_active');
 });
 
+element.querySelector('.element__delite').addEventListener('click',function(evt){
+  evt.target.parentElement.remove('element')
+});
+
+element.querySelector('.element__place-photo').addEventListener('click', function(evt){
+  cardOpen.classList.add('card-open_active');
+  cardOpen.querySelector('.card-open__image').src = element.querySelector('.element__place-photo').src;
+  cardOpen.querySelector('.card-open__label').textContent = element.querySelector('.element__place-name').textContent;
+})+
+
   closeAddpopup();
 };
+
+function closeCard(){
+  cardOpen.classList.remove('card-open_active');
+}
 
 
 addButton.addEventListener('click', openAddPopup);
 closeAddButton.addEventListener('click', closeAddpopup );
 document.querySelector('.add-popup__form').addEventListener('submit', addCard);
-
-console.log(elements);
+closeCardButton.addEventListener('click',closeCard)

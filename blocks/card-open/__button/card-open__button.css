@@ -1,0 +1,28 @@
+.card-open__button{
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../../images/logo/CloseIcon.svg);
+    background-size: cover;
+    align-self: flex-end;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+}
+
+.card-open__button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width:425px) {
+    .card-open__button{
+        width: 20px;
+        height: 20px;
+        top: -36px;
+        right: 0;
+    }
+}

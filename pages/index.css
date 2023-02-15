@@ -33,6 +33,7 @@
 @import url(../blocks/element/__place/element__place.css);
 @import url(../blocks/element/__place-name/element__place-name.css);
 @import url(../blocks/element/__button/element__button.css);
+@import url(../blocks/element/__button/_active/element__button_active.css);
 
 /*POPUP*/
 @import url(../blocks/popup/popup.css);
@@ -53,6 +54,14 @@
 @import url(../blocks/add-popup/__form/add-popup__form.css);
 @import url(../blocks/add-popup/__input/add-popup__input.css);
 @import url(../blocks/add-popup/__button/add-popup__button.css);
+
+/*CARD-OPEN*/
+@import url(../blocks/card-open/card-open.css);
+@import url(../blocks/card-open/_active/card-open_active.css);
+@import url(../blocks/card-open/__container/card-open__container.css);
+@import url(../blocks/card-open/__button/card-open__button.css);
+@import url(../blocks/card-open/__image/card-open__image.css);
+@import url(../blocks/card-open/__label/card-open__label.css);
 
 /*FOOTER*/
 @import url(../blocks/footer/footer.css);
