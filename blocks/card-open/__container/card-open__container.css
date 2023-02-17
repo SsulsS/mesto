@@ -3,6 +3,14 @@
     flex-direction: column;
     margin-top: 90px;
     position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in;
+}
+
+.popup:hover .card-open__container{
+    visibility: visible;
+    opacity: 1;
 }
 
 @media screen and (max-width:425px) {
