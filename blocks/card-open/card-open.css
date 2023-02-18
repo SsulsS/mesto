@@ -1,5 +1,5 @@
 .card-open{
-    display: none;
+    display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
