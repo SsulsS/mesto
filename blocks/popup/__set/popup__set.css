@@ -1,0 +1,44 @@
+.popup__set{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form__input-error{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    position: absolute;
+    color: #FF0000;
+    margin-left: 36px;
+    top: calc(100% + 5px);
+    max-width: 358px;
+    z-index: 2;
+}
+@media screen and (max-width:510px){
+    .form__input-error{
+        margin-left: 27px;
+        max-width: 238px;
+    }
+}
+
+.popup__label{
+    padding: 0;
+    margin: 0;
+    width: calc(430px - 36px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__label:first-of-type{
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:425px){
+    .popup__label{
+        max-width: 282  px;
+    }
+}

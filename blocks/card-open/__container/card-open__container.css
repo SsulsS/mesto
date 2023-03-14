@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     margin-top: 90px;
+    height: fit-content;
     position: relative;
+    z-index: 2;
 }
 
 @media screen and (max-width:425px) {
