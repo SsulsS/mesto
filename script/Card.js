@@ -19,10 +19,10 @@ export default class Card{
       });
       
       placePhoto.addEventListener('click', function(evt){
-          openPopup(cardPopup)
-          cardPopupImage.src = placePhoto.src;
-          cardPopupImage.alt = placePhoto.alt;
-          cardPopupLabel.textContent = placeName.textContent;
+        openPopup(cardPopup)
+        cardPopupImage.src = placePhoto.src;
+        cardPopupImage.alt = placePhoto.alt;
+        cardPopupLabel.textContent = placeName.textContent;
       })
   }
   

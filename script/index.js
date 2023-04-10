@@ -43,6 +43,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown',closeEsc);
 }
+
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown',closeEsc);
@@ -160,7 +161,6 @@ function closeOverlay(evt){
 overlayEdditPopup.addEventListener('click',closeOverlay);
 overlayAddPopup.addEventListener('click',closeOverlay);
 cardOverlay.addEventListener('click',closeOverlay);
-
 
 //VALID
 
