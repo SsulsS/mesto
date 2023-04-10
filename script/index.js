@@ -1,3 +1,6 @@
+import Card from "./Card.js";
+import FormValid from "./FormValidator.js";
+
 const elementTemplate = document.querySelector('#element-template').content;
 
 /*Кнопки*/
@@ -100,8 +103,8 @@ const initialCards = [
 
 document.addEventListener('DOMContentLoaded', function(){
   for (let i = 0; i < initialCards.length; i++){
-    const element = createCard(initialCards[i].name,initialCards[i].link)
-    cardsContainer.append(element);
+    const element = new Card(elementTemplate,initialCards[i].name,initialCards[i].link);
+    cardsContainer.append(element._createCard());
   }
 })
 
@@ -110,8 +113,8 @@ const placeLink = document.querySelector('.add-popup__input_type_link');
 
 function addCard (event) {
   event.preventDefault();
-  const element = createCard(placeName.value, placeLink.value)
-  cardsContainer.prepend(element);
+  const element = new Card(elementTemplate,placeName.value,placeLink.value);
+  cardsContainer.prepend(element._createCard());
   placeName.value = '';
   placeLink.value = '';
   closePopup(popupAddCard);
@@ -119,7 +122,7 @@ function addCard (event) {
   cardPopupSubmitButton.disabled = true;
 };
 
-function createCard(text,photo){
+/*function createCard(text,photo){
   const element = elementTemplate.querySelector('.element').cloneNode(true);
   const placePhoto = element.querySelector('.element__place-photo');
   const placeName = element.querySelector('.element__place-name');
@@ -146,7 +149,7 @@ function createCard(text,photo){
     cardPopupLabel.textContent = placeName.textContent;
   })
   return element
-};
+};*/
 
 /*Закрытие оверлей*/
 
@@ -157,3 +160,18 @@ function closeOverlay(evt){
 overlayEdditPopup.addEventListener('click',closeOverlay);
 overlayAddPopup.addEventListener('click',closeOverlay);
 cardOverlay.addEventListener('click',closeOverlay);
+
+
+//VALID
+
+let valid = new FormValid({
+  formSelector: '.form',
+  fieldsetSelector: '.popup__set',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit',
+  inactiveButtonClass: 'popup__button_inactive',
+  inputErrorClass: 'form__input_type_error',
+  errorClass: 'form__input-error_active',  
+});
+
+valid.enableValidation();
