@@ -104,7 +104,7 @@ const initialCards = [
 
 document.addEventListener('DOMContentLoaded', function(){
   for (let i = 0; i < initialCards.length; i++){
-    const element = new Card(elementTemplate,initialCards[i].name,initialCards[i].link);
+    const element = new Card(elementTemplate,initialCards[i].name,initialCards[i].link,cardPopupImage,cardPopupLabel,cardPopup,openPopup);
     cardsContainer.append(element._createCard());
   }
 })
@@ -114,7 +114,7 @@ const placeLink = document.querySelector('.add-popup__input_type_link');
 
 function addCard (event) {
   event.preventDefault();
-  const element = new Card(elementTemplate,placeName.value,placeLink.value);
+  const element = new Card(elementTemplate,placeName.value,placeLink.value,cardPopupImage,cardPopupLabel,cardPopup,openPopup);
   cardsContainer.prepend(element._createCard());
   placeName.value = '';
   placeLink.value = '';
