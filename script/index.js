@@ -54,17 +54,6 @@ function openProfilePopup(){
   openPopup(profilePopup)
   person.value = profileName.textContent;
   activity.value = profileActivity.textContent;
-
-  const  valid = new FormValid({
-    formSelector: profilePopup,
-    fieldsetSelector: '.popup__set',
-    inputSelector: '.form__input',
-    submitButtonSelector: '.form__submit',
-    inactiveButtonClass: 'popup__button_inactive',
-    inputErrorClass: 'form__input_type_error',
-    errorClass: 'form__input-error_active',  
-  });
-  valid.enableValidation();
 }
 
 function handleProfileFormSubmit(event){
@@ -78,16 +67,7 @@ profilePopupForm.addEventListener('submit', handleProfileFormSubmit);
 
 profileAddButton.addEventListener('click', function(){
   openPopup(popupAddCard);
-  const  valid = new FormValid({
-    formSelector: popupAddCardForm,
-    fieldsetSelector: '.popup__set',
-    inputSelector: '.form__input',
-    submitButtonSelector: '.form__submit',
-    inactiveButtonClass: 'popup__button_inactive',
-    inputErrorClass: 'form__input_type_error',
-    errorClass: 'form__input-error_active',  
-  });
-  valid.enableValidation();
+
 });
 
 popupAddCardForm.addEventListener('submit', addCard);
@@ -191,3 +171,25 @@ overlayAddPopup.addEventListener('click',closeOverlay);
 cardOverlay.addEventListener('click',closeOverlay);
 
 //VALID
+
+const  validProfilePopup = new FormValid({
+  formSelector: profilePopup,
+  fieldsetSelector: '.popup__set',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit',
+  inactiveButtonClass: 'popup__button_inactive',
+  inputErrorClass: 'form__input_type_error',
+  errorClass: 'form__input-error_active',  
+});
+validProfilePopup.enableValidation();
+
+const  validPopupAddCard = new FormValid({
+  formSelector: popupAddCardForm,
+  fieldsetSelector: '.popup__set',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit',
+  inactiveButtonClass: 'popup__button_inactive',
+  inputErrorClass: 'form__input_type_error',
+  errorClass: 'form__input-error_active',  
+});
+validPopupAddCard.enableValidation();
