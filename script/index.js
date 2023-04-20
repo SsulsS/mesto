@@ -54,6 +54,7 @@ function openProfilePopup(){
   openPopup(profilePopup)
   person.value = profileName.textContent;
   activity.value = profileActivity.textContent;
+  validProfilePopup.resetValidation()
 }
 
 function handleProfileFormSubmit(event){
@@ -67,7 +68,7 @@ profilePopupForm.addEventListener('submit', handleProfileFormSubmit);
 
 profileAddButton.addEventListener('click', function(){
   openPopup(popupAddCard);
-
+  validPopupAddCard.resetValidation()
 });
 
 popupAddCardForm.addEventListener('submit', addCard);
@@ -179,17 +180,17 @@ const  validProfilePopup = new FormValid({
   submitButtonSelector: '.form__submit',
   inactiveButtonClass: 'popup__button_inactive',
   inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_active',  
+  errorClass: 'form__input-error_active',
 });
 validProfilePopup.enableValidation();
 
 const  validPopupAddCard = new FormValid({
-  formSelector: popupAddCardForm,
+  formSelector: popupAddCard,
   fieldsetSelector: '.popup__set',
   inputSelector: '.form__input',
   submitButtonSelector: '.form__submit',
   inactiveButtonClass: 'popup__button_inactive',
   inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_active',  
+  errorClass: 'form__input-error_active',
 });
 validPopupAddCard.enableValidation();
