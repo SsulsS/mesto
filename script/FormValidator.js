@@ -75,7 +75,7 @@ export default class FormValid{
     this._toggleButtonState();
 
     this.inputList.forEach((inputElement) => {
-      this._hideInputError(inputElement)
+      this._hideInputError(inputElement);
     });
   }
 
