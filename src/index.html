@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
 
     <header class="header">
-        <img src="./images/logo/logo.svg" alt="Логотип" class="header__logo">
+        <img src="<%=require('./images/logo/logo.svg')%>" alt="Логотип" class="header__logo">
     </header>
 
     <main class="content">
 
         <section class="profile">
             <div class="profile__container">
-                <img src="./images/image.jpg" alt="Аватар" class="profile__avatar">
+                <img src="<%=require('./images/image.jpg')%>" alt="Аватар" class="profile__avatar">
                 <div class="profile__info">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
-                        <button type="button" class="profile__edit-button"><img src="./images/logo/pen.svg" alt="редактировать" class="profile__edit-button-image"></button>    
+                        <button type="button" class="profile__edit-button"><img src="<%=require('./images/logo/pen.svg')%>" alt="редактировать" class="profile__edit-button-image"></button>    
                         <p class="profile__activity">Исследователь океана</p>
                 </div>
             </div>
-                <button type="button" class="profile__add-button"><img src="./images/logo/krest.svg" alt="добавить" class="profile__add-button-image"></button>
+                <button type="button" class="profile__add-button"><img src="<%=require('./images/logo/krest.svg')%>" alt="добавить" class="profile__add-button-image"></button>
         </section>
 
         <section class="elements">
@@ -97,7 +96,5 @@
             </div>
         </article>
     </template>
-
-    <script type="module" src="./script/index.js"></script>
 </body>
 </html>

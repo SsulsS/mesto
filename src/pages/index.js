@@ -1,3 +1,5 @@
+import '../pages/index.css';
+
 import {
   profilePopup,
   popupAddCard,
@@ -15,7 +17,6 @@ import {
   profileActivitySelector,
   initialCards,
 } from '../script/utils/constants.js';
-
 import Card from "../script/components/Card.js";
 import FormValid from "../script/components/FormValidator.js";
 import UserInfo from "../script/components/UserInfo.js";
@@ -45,8 +46,6 @@ const  validPopupAddCard = new FormValid({
 });
 validPopupAddCard.enableValidation();
 
-
-
 const userInfo = new UserInfo({ profileNameSelector, profileActivitySelector });
 
 function createCard(item) {
@@ -59,8 +58,6 @@ function createCard(item) {
   return cardElement
 }
 
-
-
 const cards = new Section({
   items: initialCards, renderer: (item) => {
     const cardElement = createCard(item);
@@ -68,7 +65,6 @@ const cards = new Section({
   },
 }, cardsContainerSelector);
 cards.renderItems();
-
 
 const popupProfile = new PopupWithForm(profilePopupSelector, (evt) => {
   evt.preventDefault();
@@ -96,7 +92,6 @@ profileEditButton.addEventListener('click', () => {
   validProfilePopup.resetValidation()
   popupProfile.open();
 });
-
 
 profileAddButton.addEventListener('click', () => {
   validPopupAddCard.resetValidation();
