@@ -16,6 +16,7 @@ import {
   profileNameSelector,
   profileActivitySelector,
   initialCards,
+  validationConfig,
 } from '../script/utils/constants.js';
 import Card from "../script/components/Card.js";
 import FormValid from "../script/components/FormValidator.js";
@@ -24,26 +25,10 @@ import Section from "../script/components/Section.js";
 import PopupWithForm from "../script/components/PopupWithForm.js";
 import PopupWithImage from "../script/components/PopupWithImage.js";
 
-const  validProfilePopup = new FormValid({
-  formSelector: profilePopup,
-  fieldsetSelector: '.popup__set',
-  inputSelector: '.form__input',
-  submitButtonSelector: '.form__submit',
-  inactiveButtonClass: 'popup__button_inactive',
-  inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_active',
-});
+const  validProfilePopup = new FormValid(profilePopup,validationConfig);
 validProfilePopup.enableValidation();
 
-const  validPopupAddCard = new FormValid({
-  formSelector: popupAddCard,
-  fieldsetSelector: '.popup__set',
-  inputSelector: '.form__input',
-  submitButtonSelector: '.form__submit',
-  inactiveButtonClass: 'popup__button_inactive',
-  inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_active',
-});
+const  validPopupAddCard = new FormValid(popupAddCard,validationConfig)
 validPopupAddCard.enableValidation();
 
 const userInfo = new UserInfo({ profileNameSelector, profileActivitySelector });
@@ -68,7 +53,7 @@ cards.renderItems();
 
 const popupProfile = new PopupWithForm(profilePopupSelector, (evt) => {
   evt.preventDefault();
-  const formValues = popupProfile.getFormValues();
+  const formValues = popupProfile.getInputValues();
   userInfo.setUserInfo({ userName: formValues.name, userActivity: formValues.activity });
   popupProfile.close();
 });
@@ -76,7 +61,7 @@ popupProfile.setEventListener();
 
 const popupNewPlace = new PopupWithForm(popupAddCardSelector, (evt) => {
   evt.preventDefault();
-  const formValues = popupNewPlace.getFormValues();
+  const formValues = popupNewPlace.getInputValues();
   const item = { name: formValues.name, link: formValues.url };
   const cardElement = createCard(item);
   cards.addNewItem(cardElement);

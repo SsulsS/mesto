@@ -1,6 +1,6 @@
 export default class FormValid{    
-  constructor(config){
-    this.formSelector = config.formSelector;
+  constructor(popup,config){
+    this.formSelector = popup;
     this.fieldsetSelector = config.fieldsetSelector;
     this.inputSelector = config.inputSelector;
     this.submitButtonSelector = config.submitButtonSelector;

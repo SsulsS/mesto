@@ -23,6 +23,15 @@ export const imageSelector = '.element__place-photo';
 export const profileNameSelector = '.profile__name';
 export const profileActivitySelector = '.profile__activity';
 
+export const validationConfig = {
+  fieldsetSelector: '.popup__set',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit',
+  inactiveButtonClass: 'popup__button_inactive',
+  inputErrorClass: 'form__input_type_error',
+  errorClass: 'form__input-error_active',
+}
+
 export const initialCards = [
     {
       name: 'Архыз',
