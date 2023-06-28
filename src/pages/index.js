@@ -51,17 +51,15 @@ const cards = new Section({
 }, cardsContainerSelector);
 cards.renderItems();
 
-const popupProfile = new PopupWithForm(profilePopupSelector, (evt) => {
+const popupProfile = new PopupWithForm(profilePopupSelector, (evt,formValues) => {
   evt.preventDefault();
-  const formValues = popupProfile.getInputValues();
   userInfo.setUserInfo({ userName: formValues.name, userActivity: formValues.activity });
   popupProfile.close();
 });
 popupProfile.setEventListener();
 
-const popupNewPlace = new PopupWithForm(popupAddCardSelector, (evt) => {
+const popupNewPlace = new PopupWithForm(popupAddCardSelector, (evt,formValues) => {
   evt.preventDefault();
-  const formValues = popupNewPlace.getInputValues();
   const item = { name: formValues.name, link: formValues.url };
   const cardElement = createCard(item);
   cards.addNewItem(cardElement);
