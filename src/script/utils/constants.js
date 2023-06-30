@@ -11,7 +11,7 @@ export const profilePopup = document.querySelector('.profile-popup');
 export const popupAddCard = document.querySelector('.add-popup');
 export const avatarPopup = document.querySelector('.avatar-popup');
 
-export const profileAvatarEditButton = '.profile__avatar';
+export const profileAvatarEditButton = '.profile__avatar-button';
 export const profileAvatarSelector = '.profile__avatar';
 export const profileElement = document.querySelector('.profile');
 export const profileNameSelector = '.profile__name';

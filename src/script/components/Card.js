@@ -5,12 +5,24 @@ export default class Card {
     this._imageLink = data.link;
     this._imageName = data.name;
     this._name = data.name;
+    this._likes = data.likes;
     this._countLikes = data.likes.length;
     this._cardId = data._id;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
     this._handleLikeButtonClick = handleLikeButtonClick;
     this._handleRemoveButtonClick = handleRemoveButtonClick;
+    /*this._currentUserId = userId;
+    this._isUserCard = userId === data.owner._id;
+    this._imageLink = data.link;
+    this._imageName = data.name;
+    this._name = data.name;
+    this._likes = data.likes;
+    this._cardId = data._id;
+    this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
+    this._handleLikeButtonClick = handleLikeButtonClick;
+    this._handleRemoveButtonClick = handleRemoveButtonClick;*/
   }
 
   _setEventListeners() {
@@ -26,7 +38,6 @@ export default class Card {
   }
 
   _getTemplateElement() {
-    console.log(this._cardSelector);
     return document.querySelector(this._cardSelector).content.querySelector('.element').cloneNode(true);
   }
 
@@ -47,17 +58,41 @@ export default class Card {
     this._countLikeElement = this._cardElement.querySelector('.element__counter');
     this._cardElement.querySelector('.element__place-name').textContent = this._name;
     this._countLikeElement.textContent = this._countLikes;
+    this._toggleLikeState();
     this._setEventListeners();
 
     return this._cardElement;
   }
 
-  setLikeCount(likeCount) {
-    this._countLikeElement.textContent = likeCount;
-    this._likeButton.classList.toggle('element__btn-like_active');
+  _toggleLikeState() {
+    if (this._checkUserLike()) {
+      this.setLike();
+    } else {
+      this.unsetLike();
+    }
   }
 
-  isLiked() {
-    return this._likeButton.classList.contains('element__btn-like_active');
+  setLike() {
+    this._likeButton.classList.add('element__button_active');
+    this.isLiked = true;
   }
+
+  unsetLike() {
+    this._likeButton.classList.remove('element__button_active');
+    this.isLiked = false;
+  }
+
+  likesCounterUpdate(data) {
+    this._countLikeElement.textContent = data.length;
+  }
+
+  _checkUserLike() {
+    return this._likes.some((item) => item._id === this._currentUserId);
+  }
+
+  getCardId() {
+    return this._cardId;
+  }
+
+  
 }
