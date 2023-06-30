@@ -16,7 +16,9 @@
 
         <section class="profile">
             <div class="profile__container">
-                <img src="<%=require('./images/image.jpg')%>" alt="Аватар" class="profile__avatar">
+                <button class="profile__avatar-button" type="button">
+                    <img src="<%=require('./images/image.jpg')%>" alt="Аватар" class="profile__avatar">
+                </button>
                 <div class="profile__info">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
                         <button type="button" class="profile__edit-button"><img src="<%=require('./images/logo/pen.svg')%>" alt="редактировать" class="profile__edit-button-image"></button>    
@@ -81,6 +83,35 @@
             </div>
         </section>
 
+            
+        <section class="popup avatar-popup">
+            <div class="popup__overlay avatar-popup__overlay"></div>
+            <div class="popup__container">
+                <button class="popup__close-button" type="button" title="Закрыть"></button>
+                <h2 class="popup__title">Обновить аватар</h2>
+                <form class="avatar-popup__form form" name="placeData" novalidate>
+                    <fieldset class="popup__set">
+                        <label class="popup__label avatar-popup__label">
+                            <input class="popup__input form__input" id="avatar" type="url" name="url" placeholder="Ссылка на аватар" required>
+                            <span class="popup__input-error avatar-error"></span>
+                        </label>
+                        <button class="avatar-popup__button form__submit" type="submit" title="Сохранить">Сохранить</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <section class="popup confirm-popup">
+            <div class="popup__overlay confirm-popup__overlay"></div>
+            <div class="popup__container">
+                <button class="popup__close-button" type="button" title="Закрыть"></button>
+                <h2 class="popup__title confirm-popup__title">Вы уверены?</h2>
+                <form class="popup__form form" name="profileData" novalidate>  
+                    <button class="confirm-popup__button form__submit" type="submit" title="Подтвердить">Да</button>
+                </form>
+            </div>
+        </section>
+
     </main>
     <footer class="footer">
         <p class="footer__copyright">© 2020 Mesto Russia</p>
@@ -92,7 +123,10 @@
             <img src="#" alt="фото" class="element__place-photo">
             <div class="element__place">
                 <h2 class="element__place-name">Карачаевск</h2>
-                <button type="button" class="element__button"></button>
+                <div class="element__like-container">
+                    <button type="button" class="element__button"></button>
+                    <p class="element__counter">0   </p>
+                </div>
             </div>
         </article>
     </template>
