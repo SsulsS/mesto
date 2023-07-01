@@ -64,6 +64,11 @@ export default class Card {
     return this._cardElement;
   }
 
+  deliteCard(cardElement){
+    cardElement.remove()
+    
+  }
+
   _toggleLikeState() {
     if (this._checkUserLike()) {
       this.setLike();

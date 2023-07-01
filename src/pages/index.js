@@ -45,9 +45,10 @@ const cards = new Section({
   },
 }, cardsContainerSelector);
 
-const popupUpdateAvatar = new PopupWithForm(popupUpdateAvatarSelector, (evt,formValues) => {
+const popupUpdateAvatar = new PopupWithForm(popupUpdateAvatarSelector, (evt) => {
   evt.preventDefault();
   popupUpdateAvatar.isLoadingMessage(true);
+  const formValues = popupUpdateAvatar.getFormValues();
   api.changeProfileAvatar({ avatar: formValues.url }).then((data) => {
     userInfo.setUserAvatar({ userAvatarLink: data.avatar });
     popupUpdateAvatar.close();
@@ -93,9 +94,10 @@ popupProfile.setEventListener();
 const  validProfilePopup = new FormValid(profilePopup,validationConfig);
 validProfilePopup.enableValidation();
 
-const popupNewPlace = new PopupWithForm(popupNewPlaceSelector, (evt,formValues) => {
+const popupNewPlace = new PopupWithForm(popupNewPlaceSelector, (evt) => {
   evt.preventDefault();
-  popupNewPlace.isLoadingMessage(true);formValues
+  popupNewPlace.isLoadingMessage(true);
+  const formValues = popupNewPlace.getFormValues();
   const item = { name: formValues.name, link: formValues.url };
   api.addNewCard(item).then((newCardItem) => {
     const cardElement = createNewCard(newCardItem, cardSelector);
@@ -160,7 +162,7 @@ function createNewCard(item, cardSelector) {
       popupConfirm.changeHandlerSubmitForm((evt) => {
         evt.preventDefault();
         api.removeCard(cardId).then(() => {
-          cardElement.remove();
+          card.deliteCard(cardElement)
           popupConfirm.close();
 
         }).catch((err) => {
